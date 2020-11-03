@@ -1,0 +1,19 @@
+{
+  "name": "NRK.no subtitles",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "",
+  "background": {
+    "scripts": ["background.min.js"]
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.nrk.no/*"
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  }
+}
