@@ -4,9 +4,12 @@
   "manifest_version": 2,
   "description": "",
   "background": {
-    "scripts": ["background.min.js"]
+    "scripts": [
+      "background.min.js"
+    ]
   },
   "permissions": [
+    "activeTab",
     "webRequest",
     "webRequestBlocking",
     "*://*.nrk.no/*"

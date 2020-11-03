@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+require("@babel/polyfill/noConflict");
 
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -8,7 +9,10 @@ const isDevEnv = !isProdEnv;
 
 module.exports = {
     entry: {
-        'background': './src/background.js',
+        'background': [
+            '@babel/polyfill/noConflict',
+            './src/background.js'
+        ]
     },
     output: {
         filename: '[name].min.js',
