@@ -7,6 +7,7 @@ chrome.tabs.query({}, tabs => {
         () => {
             const seriesSplit = seriesUri.split('/');
             const query = {
+                lang: 'en',
                 title: seriesSplit[4].replace('-', ' '),
                 season: seriesSplit[6],
                 episode: seriesSplit[8],
