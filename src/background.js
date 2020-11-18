@@ -22,17 +22,17 @@ chrome.tabs.query({}, tabs => {
         },
         ['blocking']
     );
-
-    chrome.webRequest.onBeforeSendHeaders.addListener(
-        details => {
-            details.requestHeaders['X-Requested-With'] = 'https://tv.nrk.no';
-            return {
-                requestHeaders: details.requestHeaders
-            };
-        },
-        {
-            urls: ['*://undertekst.nrk.no/*'],
-        },
-        ['blocking']
-    );
 });
+
+chrome.webRequest.onBeforeSendHeaders.addListener(
+    details => {
+        details.requestHeaders['X-Requested-With'] = 'https://tv.nrk.no';
+        return {
+            requestHeaders: details.requestHeaders
+        };
+    },
+    {
+        urls: ['*://undertekst.nrk.no/*'],
+    },
+    ['blocking']
+);
