@@ -61,6 +61,4 @@ const qs = require('qs');
         },
         ['blocking']
     );
-
-    console.log('Started')
 })();
